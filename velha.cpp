@@ -20,6 +20,8 @@ int VerificaVelha( int velha[3][3] ) // confere linha por linha para saber se ho
     for (int i = 0; i < 3; i++) {
         if (velha[i][0] != 0 && velha[i][0] == velha[i][1] && velha[i][1] == velha[i][2]) {
             return 1; 
+        }else if (velha[0][i] != 0 && velha[0][i] == velha [1][i] && velha[2][i] == velha [1][i] ){
+            return 1;
         }
 		return 0;
 	}
