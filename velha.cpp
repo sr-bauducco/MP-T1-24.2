@@ -14,7 +14,7 @@
  * retorna TRUE. Caso não, retorna FALSE.
  */ 
 
-int VerificaVelha( int velha[3][3] )
+int VerificaVelhaLinha( int velha[3][3] )
 {
     for (int i = 0; i < 3; i++) {
         if (velha[i][0] != 0 && velha[i][0] == velha[i][1] && velha[i][1] == velha[i][2]) {
