@@ -11,6 +11,7 @@ velha.o : velha.cpp velha.hpp
 	
 testa_velha: 	testa_velha.cpp   velha.cpp velha.hpp velha.o
 	g++ -std=c++11 -Wall velha.o testa_velha.cpp -o testa_velha
+
 	
 test: testa_velha	
 	./testa_velha
@@ -40,4 +41,4 @@ valgrind: testa_velha
 clean:
 	rm -rf *.o *.exe *.gc* testa_velha 
 	
-	
+

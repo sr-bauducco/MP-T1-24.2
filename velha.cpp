@@ -14,14 +14,16 @@
  * retorna TRUE. Caso não, retorna FALSE.
  */ 
 
-int VerificaVelhaLinha( int velha[3][3] )
+int VerificaVelha( int velha[3][3] ) // confere linha por linha para saber se houve vitoria
 {
+    // confere linha por linha para saber se houve vitoria
     for (int i = 0; i < 3; i++) {
         if (velha[i][0] != 0 && velha[i][0] == velha[i][1] && velha[i][1] == velha[i][2]) {
-            return true; 
+            return 1; 
         }
-		return false;
+		return 0;
 	}
-}
+};
+
 
 
