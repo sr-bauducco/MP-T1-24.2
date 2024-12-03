@@ -30,7 +30,7 @@ TEST_CASE( "Testa velha", "[single-file]" ) {
   	REQUIRE( VerificaVelha(teste_linha_falha) == 0 );
 	REQUIRE( VerificaVelha (teste_linha_sucesso)== 1);
 	REQUIRE( VerificaVelha(teste_coluna_falha) == 0 );
-	REQUIRE( VerificaVelha (teste_coluna_sucesso) == 1);
+	REQUIRE( VerificaVelha (teste_coluna_sucesso) == 2);
 	
 } 
  

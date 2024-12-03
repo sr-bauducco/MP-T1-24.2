@@ -31,26 +31,31 @@ void contarJogadores(int tabuleiro[3][3], int &countX, int &countO) {
 
 int VerificaVelha( int velha[3][3] )
 {
-    // Verificando as linhas
+    // Verificando as linhas e retornando ganhador
      for (int i = 0; i < 3; ++i) {
         if (velha[i][0] == velha[i][1] && velha[i][1] == velha[i][2] && velha[i][0] != 0) {
             return velha[i][0];
         }
     }
     
-    // Verificando as colunas forçadamente 
+    // Verificando as colunas e retornando ganhador 
     for (int i = 0; i < 3; ++i) {
-        if (velha[0][0] == velha[1][0] && velha[1][0] == velha[2][0] && velha[0][0] != 0)  
-        {
-            return 1; // Vitória na coluna
-        }else if( velha[0][1] == velha[1][1] && velha[1][1] == velha[2][1] && velha[0][1] != 0 )
-        {
-            return 1; // Vitória na coluna
-        }else if(velha[0][2] == velha[1][2] && velha[1][2] == velha[2][2] && velha[0][2] != 0){
-            return 1; // Vitória na coluna
+        if (velha[0][1] == velha[1][i] && velha[1][i] == velha[2][i] && velha[0][i] != 0) {
+            return velha[0][i];
         }
-        return 0;
     }
+//    for (int i = 0; i < 3; ++i) {
+//        if (velha[0][0] == velha[1][0] && velha[1][0] == velha[2][0] && velha[0][0] != 0)  
+//        {
+//            return 1; // Vitória na coluna
+//        }else if( velha[0][1] == velha[1][1] && velha[1][1] == velha[2][1] && velha[0][1] != 0 )
+//        {
+//            return 1; // Vitória na coluna
+//        }else if(velha[0][2] == velha[1][2] && velha[1][2] == velha[2][2] && velha[0][2] != 0){
+//            return 1; // Vitória na coluna
+//        }
+//        return 0;
+//    }
     return 0;
 };
 
