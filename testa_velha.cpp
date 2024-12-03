@@ -21,8 +21,8 @@ TEST_CASE( "Testa velha", "[single-file]" ) {
     								   {1, 2, 2}
 					  };
 	int teste_empate[3][3]{    {1, 2, 1},
-    						   {2, 1, 2},
-    						   {2, 1, 1}
+    						   {2, 1, 1},
+    						   {2, 1, 2}
 					  };
 	int teste_diagonal_sucesso[3][3]{  {1, 2, 1},  
     								   {2, 1, 2},  
