@@ -52,7 +52,7 @@ cd TDD_VELHA
 
 ### 3. Compilar o Código
 
-O código pode ser compilado com o compilador C++ de sua preferência. Aqui estão alguns exemplos:
+O código pode ser compilado com o compilador C++ de sua preferência.
 
 ## Funcionalidades
 
