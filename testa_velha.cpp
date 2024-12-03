@@ -27,10 +27,15 @@ TEST_CASE( "Testa velha", "[single-file]" ) {
 	                      			  { 1, 2, 2 },
 						  			  { 1, 2, 1 }
 					  };
+	int teste_empate[3][3]{   { 2, 2, 1 }, 
+	                    	  { 1, 1, 2 },
+							  { 1, 2, 1 }
+					  };
+	
   	REQUIRE( VerificaVelha(teste_linha_falha) == 0 );
 	REQUIRE( VerificaVelha (teste_linha_sucesso)== 1);
-	REQUIRE( VerificaVelha(teste_coluna_falha) == 0 );
+	REQUIRE( VerificaVelha (teste_coluna_falha) == 0 );
 	REQUIRE( VerificaVelha (teste_coluna_sucesso) == 2);
-	
+	REQUIRE( VerificaVelha (teste_empate) == 0);	
 } 
  

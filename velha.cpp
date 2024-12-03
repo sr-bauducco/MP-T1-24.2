@@ -44,18 +44,6 @@ int VerificaVelha( int velha[3][3] )
             return velha[0][i];
         }
     }
-//    for (int i = 0; i < 3; ++i) {
-//        if (velha[0][0] == velha[1][0] && velha[1][0] == velha[2][0] && velha[0][0] != 0)  
-//        {
-//            return 1; // Vitória na coluna
-//        }else if( velha[0][1] == velha[1][1] && velha[1][1] == velha[2][1] && velha[0][1] != 0 )
-//        {
-//            return 1; // Vitória na coluna
-//        }else if(velha[0][2] == velha[1][2] && velha[1][2] == velha[2][2] && velha[0][2] != 0){
-//            return 1; // Vitória na coluna
-//        }
-//        return 0;
-//    }
     return 0;
 };
 
