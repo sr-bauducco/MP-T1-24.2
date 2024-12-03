@@ -34,7 +34,7 @@ int VerificaVelha( int velha[3][3] )
     // Verificando as linhas
      for (int i = 0; i < 3; ++i) {
         if (velha[i][0] == velha[i][1] && velha[i][1] == velha[i][2] && velha[i][0] != 0) {
-            return velha[i][0]; // Retorna 1 (X) ou 2 (O)
+            return velha[i][0];
         }
     }
     
