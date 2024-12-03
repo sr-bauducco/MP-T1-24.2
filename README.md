@@ -43,3 +43,48 @@ A função realiza a seguinte verificação:
 
 Primeiro, você deve clonar o repositório para sua máquina local. Use o comando Git:
 
+git clone https://github.com/seu-usuario/jogo-da-velha.git
+
+### 2. Navegar até o Diretório do Projeto
+
+Entre no diretório do projeto:
+
+cd TDD_VELHA
+
+### 3. Compilar o Código
+
+O código pode ser compilado com o compilador C++ de sua preferência. Aqui estão alguns exemplos:
+
+## Funcionalidades
+
+- **Verificação de Vitória**: A função verifica se há um vencedor em qualquer linha, coluna ou diagonal.
+- **Empate**: A função identifica se o tabuleiro está completo e sem vencedor (empate).
+- **Jogo Indefinido**: Se houver espaços vazios, o jogo é marcado como indefinido.
+- **Jogo Impossível**: Se houver um número de jogadas inconsistente (como mais `X`s do que `O`s), a função retornará que o jogo é impossível.
+
+## Testes
+
+Diversos cenários de teste foram realizados para garantir que a função **`VerificaVelha`** retorna os resultados corretos. A função foi testada em cenários que incluem:
+
+1. Vencedor em Linha
+2. Vencedor em Coluna
+3. Vencedor em Diagonal
+4. Empate (Tabuleiro completo, sem vencedor)
+5. Jogo Indefinido (Existem espaços vazios)
+6. Jogo Impossível (Regras violadas, como mais jogadas de `X` que `O`)
+
+## Exemplos de Matrizes de Teste
+
+### 1. Vencedor em Linha (X vence)
+
+int teste_vencedor_linha[3][3] = {
+    {1, 1, 1},
+    {2, 0, 2},
+    {0, 0, 2}
+};
+Resultado esperado: 1
+
+
+
+
+
