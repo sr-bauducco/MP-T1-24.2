@@ -42,7 +42,7 @@ A função realiza a seguinte verificação:
 
 Primeiro, você deve clonar o repositório para sua máquina local. Use o comando Git:
 
-git clone https://github.com/seu-usuario/jogo-da-velha.git
+git clone https://github.com/sr-bauducco/MP-T1-24.2
 
 ### 2. Navegar até o Diretório do Projeto
 
