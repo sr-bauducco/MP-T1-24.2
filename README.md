@@ -9,8 +9,7 @@ Este repositório contém a implementação de um **Jogo da Velha** em **C++**. 
 3. [Como Baixar e Configurar](#como-baixar-e-configurar)
 4. [Funcionalidades](#funcionalidades)
 5. [Testes](#testes)
-6. [Exemplos de Matrizes de Teste](#exemplos-de-matrizes-de-teste)
-7. [Licença](#licença)
+
 
 ## Descrição do Jogo
 
@@ -72,17 +71,6 @@ Diversos cenários de teste foram realizados para garantir que a função **`Ver
 4. Empate (Tabuleiro completo, sem vencedor)
 5. Jogo Indefinido (Existem espaços vazios)
 6. Jogo Impossível (Regras violadas, como mais jogadas de `X` que `O`)
-
-## Exemplos de Matrizes de Teste
-
-### 1. Vencedor em Linha (X vence)
-
-int teste_vencedor_linha[3][3] = {
-    {1, 1, 1},
-    {2, 0, 2},
-    {0, 0, 2}
-};
-Resultado esperado: 1
 
 
 
