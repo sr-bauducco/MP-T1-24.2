@@ -1,0 +1,74 @@
+        -:    0:Source:velha.cpp
+        -:    1:/**
+        -:    2: * \file  velha.cpp
+        -:    3: */
+        -:    4:
+        -:    5: 
+        -:    6:#include "velha.hpp"
+        -:    7:
+        -:    8:/** 
+        -:    9: * @brief verifica situacao do jogo da velha  
+        -:   10: * @author Programador 
+        -:   11: * @param  velha descreve o parametro
+        -:   12: * 
+        -:   13: *  O programa acompanha, linha por linha, o preenchimento da matriz, a fim de saber se os numeros preenchidos, são iguais. Caso forem,
+        -:   14: * retorna TRUE. Caso não, retorna FALSE.
+        -:   15: */ 
+        -:   16:
+        -:   17:
+        6:   18:int VerificaVelha(int velha[3][3]) {
+        -:   19:    // Variáveis para contar o número de X's e O's
+        6:   20:    int countX = 0, countO = 0;
+        -:   21:
+        -:   22:    // Verificando se o tabuleiro está completo (sem espaços vazios)
+        6:   23:    bool completo = true;
+       24:   24:    for (int i = 0; i < 3; ++i) {
+       72:   25:        for (int j = 0; j < 3; ++j) {
+       54:   26:            if (velha[i][j] == 0) {
+        9:   27:                completo = false; // Se houver algum 0, o tabuleiro não está completo
+        -:   28:            }
+       54:   29:            if (velha[i][j] == 1) countX++;
+       54:   30:            if (velha[i][j] == 2) countO++;
+        -:   31:        }
+        -:   32:    }
+        -:   33:
+        -:   34:    // Verificação de número inválido de X's e O's
+        6:   35:    if (countX > countO + 1 || countO > countX) {
+        1:   36:        return -2; // Jogo impossível pelas regras
+        -:   37:    }
+        -:   38:
+        -:   39:    // Verificando as linhas para um vencedor
+       17:   40:    for (int i = 0; i < 3; ++i) {
+       13:   41:        if (velha[i][0] == velha[i][1] && velha[i][1] == velha[i][2] && velha[i][0] != 0) {
+        1:   42:            return velha[i][0]; // Se alguém venceu, retorna 1 (X) ou 2 (O)
+        -:   43:        }
+        -:   44:    }
+        -:   45:
+        -:   46:    // Verificando as colunas para um vencedor
+       13:   47:    for (int i = 0; i < 3; ++i) {
+       10:   48:        if (velha[0][i] == velha[1][i] && velha[1][i] == velha[2][i] && velha[0][i] != 0) {
+        1:   49:            return velha[0][i]; // Se alguém venceu, retorna 1 (X) ou 2 (O)
+        -:   50:        }
+        -:   51:    }
+        -:   52:
+        -:   53:    // Verificando a diagonal principal para um vencedor
+        3:   54:    if (velha[0][0] == velha[1][1] && velha[1][1] == velha[2][2] && velha[0][0] != 0) {
+        1:   55:        return velha[0][0]; // Se alguém venceu, retorna 1 (X) ou 2 (O)
+        -:   56:    }
+        -:   57:
+        -:   58:    // Verificando a diagonal secundária para um vencedor
+       2*:   59:    if (velha[0][2] == velha[1][1] && velha[1][1] == velha[2][0] && velha[0][2] != 0) {
+    #####:   60:        return velha[0][2]; // Se alguém venceu, retorna 1 (X) ou 2 (O)
+        -:   61:    }
+        -:   62:
+        -:   63:    // Se o tabuleiro está completo e ninguém venceu, é empate
+        2:   64:    if (completo) {
+        1:   65:        return 0; // Empate
+        -:   66:    }
+        -:   67:
+        -:   68:    // Se ainda houver espaços vazios, o jogo está indefinido
+        1:   69:    return -1; // Jogo indefinido
+        -:   70:}
+        -:   71:
+        -:   72:
+        -:   73:
